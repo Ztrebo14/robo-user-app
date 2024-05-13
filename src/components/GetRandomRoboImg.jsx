@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
+const GetRandomRoboImg = ({ userId }) => {
+    const [ roboImg, setRoboImg ] = useState('')
+
+    useEffect(() => {
+        const fetchRoboImg = async () => {
+            try {
+                const response = await axios.get(`https://robohash.org/${userId}?size=200x200`)
+                setRoboImg(response.config.url)
+            } catch (error) {
+                console.error('Error fetching Robo image:', error)
+            }
+        }
+        fetchRoboImg()
+    }, [userId])
+
+  return (
+    <>
+    { roboImg && (
+        <img src={roboImg} alt={`Robot for user ${userId}`} style={{ width: '200px', height: '200px' }}/>
+    )}
+    </>
+  )
+}
+
+export default GetRandomRoboImg
