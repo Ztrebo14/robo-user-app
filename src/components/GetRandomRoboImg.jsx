@@ -19,7 +19,7 @@ const GetRandomRoboImg = ({ userId }) => {
   return (
     <>
     { roboImg && (
-        <img src={roboImg} alt={`Robot for user ${userId}`} style={{ width: '200px', height: '200px' }}/>
+        <img src={roboImg} alt={`Robot for user ${userId}`} style={{ width: '100px', height: '100px' }}/>
     )}
     </>
   )

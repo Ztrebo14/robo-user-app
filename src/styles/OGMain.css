@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(223, 152, 164);
+    /* background-image: linear-gradient(pink, rgb(217, 109, 109), rgb(87, 81, 81)); */
+    background-repeat: no-repeat;
+}
+
+:root {
+    
+}
